@@ -18,6 +18,14 @@ while palpite != secreto and tentativas < 7:
         print('É menos que isso')
     else:
         print('Acertou!')
+    if palpite!= secreto:
+        diferenca = abs (palpite - secreto)
+        if diferenca <= 5:
+            print ('Quente')
+        elif diferenca <= 15:
+            print ('Morno')
+        else: 
+            print ('Frio')
 
 if palpite == secreto:
     print('Você acertou em', tentativas, 'tentativas')
