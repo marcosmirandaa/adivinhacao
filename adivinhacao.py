@@ -5,7 +5,11 @@ secreto = random.randint(1, 100)
 tentativas = 0
 
 while palpite != secreto and tentativas < 7:
-    palpite = int(input('Diga seu palpite: '))
+    try:
+        palpite = int(input('Diga seu palpite: '))
+    except ValueError:
+        print ('Isto não é um número!')
+        continue
     tentativas += 1
 
     if palpite < secreto:
